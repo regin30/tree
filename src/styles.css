@@ -1,0 +1,46 @@
+.tree {
+	padding: 10px;
+}
+
+.directory {
+	padding-top: 10px;
+	padding-left: 15px;
+	position: relative;
+}
+
+.directory::before {
+	content: "^";
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 10px;
+	transform: rotate(90deg);
+	transform-origin: center;
+	transition: transform 0.3s ease;
+}
+
+.directory.opened::before {
+transform: rotate(180deg);
+transform-origin: center;
+}
+
+.sub-directory {
+	padding-top: 10px;
+}
+
+.hidden{
+	display: none;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+ul>ul,
+ul>li {
+	margin-left: 10px;
+}
